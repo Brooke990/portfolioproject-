@@ -15,13 +15,12 @@ body, html {
 
 /* Center the navbar links */
 .navbar {
-    background-color: #ff9c84; /* Orange background */
+    background-color: #ff9c84; 
 }
 
 .navbar-nav .nav-link {
     margin: 0 80px;
     color: rgb(0, 0, 0) !important;
-    font-style: italic;
     text-transform: uppercase;
     font-size: 1.2rem;
 }
@@ -37,39 +36,32 @@ body, html {
 
 /* Section 1: Home */
 #home {
-    background-color: #ff9c84; /* Orange background */
+    background-color: #ff9c84;
     color: rgb(0, 0, 0);
-    padding: 5rem 2rem; /* Add space around the section */
+    padding: 5rem 2rem;
 }
 
-/* Flexbox Layout */
-#home .container {
-    display: flex;
-    align-items: center; /* Vertically align text and photo */
-    justify-content: space-between; /* Space out text and photo */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    gap: 2rem; /* Add spacing between items */
+.text-content {
+    flex: 1;
+    max-width: 500px;
 }
 
-/* Text Content Styling */
-#home .text-content {
-    flex: 1; /* Let text take up more space */
-    max-width: 600px; /* Limit the width of the text */
-}
-
-/* Image Content Styling */
-#home .image-content {
-    flex: 1; /* Let image take up equal space */
+.image-content {
+    flex: 1;
     display: flex;
     justify-content: center;
 }
 
-.profile-photo {
-    width: 300px; /* Set the size of the square photo */
-    height: 300px; /* Ensure the image remains square */
-    object-fit: cover; /* Crop the image to fit within the square */
-    border-radius: 0; /* Remove rounded corners */
-    border: 2px solid white; /* Add a white border */
+.carousel-inner img {
+    width: 500%; /* Ensure images fit within carousel */
+    height: 500px;
+    object-fit: cover; /* Ensure the images maintain their aspect ratio */
+    border-radius: 30px; /* Optional: Rounded corners */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Make controls visible against dark backgrounds */
 }
 
 /* Section 2: Portfolio */
@@ -88,7 +80,7 @@ body, html {
 
 /* Footer */
 footer {
-    background-color: #333; /* Dark footer */
+    background-color: #333; 
     color: white;
     padding: 1rem 0;
     text-align: center;
