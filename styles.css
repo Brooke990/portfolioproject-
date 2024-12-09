@@ -7,10 +7,9 @@ body, html {
 
 .custom-navbar {
     background-color: #ff9c84;
-    font-family: 'Georgia', serif; /* For the italicized font */
-    font-size: 1.2rem; /* Adjust font size */
+    font-size:5rem;
     text-transform: uppercase;
-    padding: 10px 0; /* Adjust spacing */
+    padding: 10px 0; 
 }
 
 /* Center the navbar links */
@@ -20,15 +19,16 @@ body, html {
 
 .navbar-nav .nav-link {
     margin: 0 80px;
-    color: rgb(0, 0, 0) !important;
+    color: rgb(0, 0, 0) ;
+    font-family: Arial;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .navbar-nav .nav-link:hover {
     background-color: rgb(255, 255, 255); 
     font-size: 18px; 
-    color: black !important; 
+    color: black ; 
     border-radius: 5px; 
     padding: 5px 10px; 
 }
@@ -53,23 +53,92 @@ body, html {
 }
 
 .carousel-inner img {
-    width: 500%; /* Ensure images fit within carousel */
+    width: 700%; 
     height: 500px;
-    object-fit: cover; /* Ensure the images maintain their aspect ratio */
-    border-radius: 30px; /* Optional: Rounded corners */
+    object-fit: contain; 
+    border-radius: 50px; 
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: invert(1); /* Make controls visible against dark backgrounds */
+    filter: invert(1); 
 }
 
 /* Section 2: Portfolio */
 #portfolio {
-    background-color: #ffb9f6; /* White background */
+    background-color: #ffb9f6; 
     color: black;
     padding: 5rem 0;
 }
+
+/* Card Shadow for Portfolio Projects */
+/* From Uiverse.io by SouravBandyopadhyay */ 
+.card-title {
+    color: #000000;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+  
+  .small-desc {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #ffffff;
+  }
+  
+  .small-desc {
+    font-size: 1em;
+    color: #000000;
+  }
+  
+  .card {
+    display: block;
+    position: relative;
+    max-width: 300px;
+    max-height: 320px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    padding: 2em 1.2em;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom,  #ffcaf8, #f6a3fd);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  
+  .card:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, #8f3683, #f6a3fd);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.35s ease-out;
+  }
+  
+  .card:hover:before {
+    transform: scale(28);
+  }
+  
+  .card:hover .small-desc {
+    transition: all 0.5s ease-out;
+    color: rgb(255, 255, 255);
+  }
+  
+  .card:hover .card-title {
+    transition: all 0.5s ease-out;
+    color: #ffffff;
+  }
+  
 
 /* Section 3: Contact */
 #contact {
@@ -78,24 +147,25 @@ body, html {
     padding: 5rem 0;
 }
 
-/* Footer */
-footer {
-    background-color: #333; 
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-
-/* Card Shadow for Portfolio Projects */
-.card {
-    border: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card-body {
-    text-align: center;
-}
+.email-button {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: #2882e2;
+    color: rgb(0, 0, 0);
+    text-decoration: none; /* Remove underline */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; /* hover effect */
+  }
+  
+  .email-button:hover {
+    background-color: #072ba1; 
+    color: rgb(255, 255, 255);
+    transform: translateY(-2px); 
+  }
+  
 
 /* Form Styling in Contact Section */
 form .form-control {
@@ -105,14 +175,21 @@ form .form-control {
 
 form .btn {
     background-color: #f4f4f4;
-    color: #014D43;
+    color: #000000;
     border: none;
     padding: 0.5rem 1.5rem;
     transition: 0.3s;
 }
 
 form .btn:hover {
-    background-color: #014D43;
+    background-color: #072ba1;
     color: white;
 }
 
+/* Footer */
+footer {
+    background-color: #333; 
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
