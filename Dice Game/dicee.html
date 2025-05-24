@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>Dice Game</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet" />
+
+  <style>
+    img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .dice {
+      display: inline-block;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dice Game</h1>
+
+    <div class="dice">
+      <p>Player 1</p>
+      <img class="img1" src="images/dice1.png" alt="Dice 1" />
+    </div>
+
+    <div class="dice">
+      <p>Player 2</p>
+      <img class="img2" src="images/dice2.png" alt="Dice 2" />
+    </div>
+
+  </div>
+
+  <script>
+    function rollDice() {
+      let diceImage1 = document.querySelector(".img1");
+      let diceImage2 = document.querySelector(".img2");
+      let resultText = document.querySelector("h1");
+
+      let randomNumber1 = Math.floor(Math.random() * 6) + 1;
+      let randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+      diceImage1.src = `images/dice${randomNumber1}.png`;
+      diceImage2.src = `images/dice${randomNumber2}.png`;
+
+      if (randomNumber1 > randomNumber2) {
+        resultText.textContent = "Player 1 Wins!";
+      } else if (randomNumber2 > randomNumber1) {
+        resultText.textContent = "Player 2 Wins!";
+      } else {
+        resultText.textContent = "It's a Draw!";
+      }
+    }
+
+    // Automatically roll once on page load
+    rollDice();
+  </script>
+</body>
+</html>

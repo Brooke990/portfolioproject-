@@ -1,0 +1,40 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  background-color: #00aef0;
+  color: white;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.instruction {
+  font-size: 1.1rem;
+  margin-top: 15px;
+}
+
+#result {
+  font-size: 2rem;
+  margin-top: 30px;
+  font-weight: bold;
+}
